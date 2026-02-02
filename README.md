@@ -2,6 +2,12 @@
 
 Smart building management dashboard built with React, TypeScript, and Tailwind CSS.
 
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue.svg)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3.6-38bdf8.svg)](https://tailwindcss.com/)
+
+> **Note**: This is a front-end interview task for MClimate. The code is for evaluation purposes only.
+
 ## What is this?
 
 This is a dashboard app for managing buildings and IoT devices. It can handle a lot of data - around 200-300 buildings and 300,000+ devices. The UI is based on a Figma design and uses Tailwind CSS for styling.
@@ -14,24 +20,39 @@ This is a dashboard app for managing buildings and IoT devices. It can handle a 
 - **Tailwind CSS** for styling
 - **react-window** for virtualization (needed for the huge device lists)
 
-## How to Run
+## 🚀 Quick Start
 
-1. Install dependencies:
+### Prerequisites
+
+- Node.js 18+ and npm/yarn/pnpm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/iNen0v/mclimate-frontend2.git
+cd mclimate-frontend2
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start the dev server:
+3. Start the development server:
 ```bash
 npm start
 ```
 
-The app will open at `http://localhost:3000`
+The app will open at `http://localhost:3000` (opens automatically in your browser)
 
-3. Build for production:
+### Build for Production
+
 ```bash
 npm run build
 ```
+
+The production build will be in the `build` directory.
 
 ## Project Structure
 
@@ -110,17 +131,26 @@ Devices can exist at any level of this hierarchy.
 
 5. **Component Structure**: Separated concerns - UI components, business logic (in utils), and data fetching (in services).
 
-## What Could Be Better
+## 🎯 Features
+
+- ✅ **Buildings List**: View all buildings with detailed statistics
+- ✅ **Hierarchical Navigation**: Expandable sidebar (buildings → floors → spaces → rooms)
+- ✅ **Devices Management**: All devices grouped by type with detailed information
+- ✅ **Performance Optimized**: Virtualized lists for handling 300,000+ devices
+- ✅ **Responsive Design**: Works on mobile, tablet, and desktop
+- ✅ **Modern UI**: Clean, professional B2B SaaS design matching Figma specs
+- ✅ **Loading/Error States**: Proper handling of different data states
+
+## 🔮 Future Improvements
 
 If I had more time, I would:
 
 1. **Add search/filter**: Debounced search for buildings and devices, filters by type/status
 2. **Pagination**: For buildings list if it grows beyond 300 items
-3. **Responsive design**: Make sidebar collapsible on mobile
-4. **Skeleton loaders**: Instead of spinner, show skeleton screens while loading
-5. **Error handling**: Better error messages and retry logic
-6. **Testing**: Add unit tests for utilities and component tests
-7. **Accessibility**: Add ARIA labels and keyboard navigation
+3. **Skeleton loaders**: Instead of spinner, show skeleton screens while loading
+4. **Error handling**: Better error messages and retry logic
+5. **Testing**: Add unit tests for utilities and component tests
+6. **Accessibility**: Add ARIA labels and keyboard navigation
 
 ## Production Considerations
 
@@ -133,21 +163,25 @@ If this was going to production, I would:
 5. **WebSockets**: For real-time device status updates
 6. **Error tracking**: Add Sentry or similar for error monitoring
 
-## Known Issues
+## 📝 Notes
 
-- The API returns all data at once, which can be slow on slow connections
-- No search/filter functionality yet
-- Sidebar is fixed width - could be made responsive
+- The API returns all data at once, which can be slow on slower connections (~2-3 seconds initial load)
+- Search/filter functionality is not implemented yet
+- Sidebar is responsive on mobile (collapsible drawer)
 - No pagination for buildings (but 200-300 items is manageable)
 
-## Browser Support
+## 🌐 Browser Support
 
-Works on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
 
-## License
+## 📧 Contact
 
-This is a project for MClimate interview task.
+For questions about this project, please contact:
+- **Nickole Dimitrova**: nickole@mclimate.eu
+
+## 📄 License
+
+This project is proprietary software for MClimate interview evaluation purposes.
