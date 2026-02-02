@@ -28,3 +28,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Design reference files (not used in code)
+MClimate.SVG/
